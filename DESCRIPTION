@@ -1,7 +1,7 @@
 Package: survivalsvm
 Type: Package
 Title: Survival Support Vector Analysis
-Version: 0.0.2
+Version: 0.0.3
 Author: Cesaire J. K. Fouodo
 Maintainer: Cesaire Fouodo <fouodo@imbs.uni-luebeck.de>
 Description: Performs support vectors analysis for data sets with survival
@@ -11,7 +11,7 @@ Description: Performs support vectors analysis for data sets with survival
     set the objective to maximize the concordance index for comparable pairs
     of observations. The hybrid approach combines the regression and ranking
     constraints in the same model.
-Imports: pracma, kernlab, Matrix, stats, Hmisc
+Imports: pracma, quadprog, kernlab, Matrix, stats, Hmisc
 Suggests: testthat
 Depends: survival
 License: GPL
@@ -19,6 +19,6 @@ RoxygenNote: 6.0.1
 URL: https://github.com/imbs-hl/survivalsvm
 BugReports: https://github.com/imbs-hl/survivalsvm/issues
 NeedsCompilation: no
-Packaged: 2017-06-14 12:48:53 UTC; fouodo
+Packaged: 2017-11-20 10:41:31 UTC; fouodo
 Repository: CRAN
-Date/Publication: 2017-06-14 22:20:26 UTC
+Date/Publication: 2017-11-20 13:15:48 UTC
