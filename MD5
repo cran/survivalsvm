@@ -1,14 +1,14 @@
-4b5d066a07e45d4708957ae5baded279 *DESCRIPTION
-739114faade376b646bd5c6181d89c10 *NAMESPACE
+d43922ae7072d992c73060c00c8e7cf7 *DESCRIPTION
+ba8c91e25dc44ea8e2fda312d6776122 *NAMESPACE
 8ad11e7e62aef4f39ca42609c958b13a *NEWS.md
 0356c0a4a3c30e8490af35f14f40d515 *R/Diffmatrix.R
 9b01211528eb8de02c3a2db0a08727f2 *R/hybrid.R
 89350cc5af8f632e38d56c149d90200e *R/kernels.R
 9567361b3b6b92c0d193d62c215f35fd *R/perfomances.R
-26e20c5ebea83d1d549f7e0dba1643f8 *R/predictions.R
-afb846fb7019120354e1aa77d2ea4fd3 *R/prints.R
+875db32ddb098120c93738c347595d8c *R/predictions.R
+fc975dcdbba25ae1f9feefbab5cec3da *R/prints.R
 affe8c1eb01fb466c8876fcaf5bd6971 *R/regression.R
-42f99ef1239b089b3cd52736f0efdd8a *R/survivalsvm.R
+fb6530897dfc1b5ca475081af272795d *R/survivalsvm.R
 37b623902f823b22e3c436a2b3a9785f *R/vanbelle1.R
 78911f7576ac78a9c171ed30a7375713 *R/vanbelle2.R
 5ad164a84750dfabd17219c2694ad61b *README.md
@@ -133,5 +133,5 @@ f51885d549b88e96f26bd3c38560919c *man/setb0.default.Rd
 6da89bc7d9df66b0091ec2c6b6bea66f *man/survivalsvm.Rd
 860d0a0ed06624c4d7251d34fcebf468 *man/vanbelle1Fit.Rd
 02098384b23df7a191c66370bca58a3b *man/vanbelle2Fit.Rd
-d7addc4cfa9c6e2d82140ef9e2b7c3ca *tests/testthat.R
+d82f3f00dd33c6fea6d6aaabd038f2a3 *tests/testthat.R
 d2bcfe816ae6bcb090602b0320cb5b45 *tests/testthat/test_simple.R
