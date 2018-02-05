@@ -1,12 +1,12 @@
-d43922ae7072d992c73060c00c8e7cf7 *DESCRIPTION
+9574651f80d24677709e2c6cd7f40464 *DESCRIPTION
 ba8c91e25dc44ea8e2fda312d6776122 *NAMESPACE
 8ad11e7e62aef4f39ca42609c958b13a *NEWS.md
 0356c0a4a3c30e8490af35f14f40d515 *R/Diffmatrix.R
 9b01211528eb8de02c3a2db0a08727f2 *R/hybrid.R
 89350cc5af8f632e38d56c149d90200e *R/kernels.R
 9567361b3b6b92c0d193d62c215f35fd *R/perfomances.R
-875db32ddb098120c93738c347595d8c *R/predictions.R
-fc975dcdbba25ae1f9feefbab5cec3da *R/prints.R
+58a5542506dcaca8b70867f86e9f2d20 *R/predictions.R
+05655724a21cb552da6cff7bb126095d *R/prints.R
 affe8c1eb01fb466c8876fcaf5bd6971 *R/regression.R
 fb6530897dfc1b5ca475081af272795d *R/survivalsvm.R
 37b623902f823b22e3c436a2b3a9785f *R/vanbelle1.R
@@ -72,7 +72,7 @@ f334196dddfe9e249e83788ea08015ea *man/kernelMatrix.Rd
 3ad9c1b1452695f8860037103977f225 *man/makediff1.Rd
 7bec55815ce3796abd34ee5a10a5aa38 *man/makediff2.Rd
 6c36237a21a58162843bfaeccb4ba700 *man/makediff3.Rd
-236f4d3e3015fefade724ede5ea81833 *man/predict.survivalsvm.Rd
+71a21be2488fb48f89b6613e0720d4a9 *man/predict.survivalsvm.Rd
 239ac63bc81b8693f47bd1f7953a7349 *man/predictHybrid.Rd
 92677d71b816b437acc21ef69a90cf4f *man/predictRegFitObj.Rd
 4e0f83ffb3ad57c73e53bb89b563398e *man/predictVB1FitObj.Rd
