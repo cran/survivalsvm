@@ -4,12 +4,27 @@
 \alias{survivalsvm}
 \title{survivalsvm}
 \usage{
-survivalsvm(formula = NULL, data = NULL, subset = NULL,
-  type = "regression", diff.meth = NULL, gamma.mu = NULL,
-  opt.meth = "quadprog", kernel = "lin_kernel", kernel.pars = NULL,
-  time.variable.name = NULL, status.variable.name = NULL, sgf.sv = 5,
-  sigf = 7, maxiter = 20, margin = 0.05, bound = 10, eig.tol = 1e-06,
-  conv.tol = 1e-07, posd.tol = 1e-08)
+survivalsvm(
+  formula = NULL,
+  data = NULL,
+  subset = NULL,
+  type = "regression",
+  diff.meth = NULL,
+  gamma.mu = NULL,
+  opt.meth = "quadprog",
+  kernel = "lin_kernel",
+  kernel.pars = NULL,
+  time.variable.name = NULL,
+  status.variable.name = NULL,
+  sgf.sv = 5,
+  sigf = 7,
+  maxiter = 20,
+  margin = 0.05,
+  bound = 10,
+  eig.tol = 1e-06,
+  conv.tol = 1e-07,
+  posd.tol = 1e-08
+)
 }
 \arguments{
 \item{formula}{[\code{formula(1)}]\cr
@@ -34,7 +49,7 @@ Parameters of regularization. Note that a vector with two parameters is required
 one value is required in case of \code{regression}, \code{vanbelle1} or \code{vanbelle2}.}
 
 \item{opt.meth}{[\code{character(1)}]\cr
-Program used to solve the quadratic optimization problem. Either "\code{\link{quadprog}}" or "\code{\link{ipop}}".}
+Program used to solve the quadratic optimization problem. Either "\code{\link[pracma]{quadprog}}" or "\code{\link[kernlab]{ipop}}".}
 
 \item{kernel}{[\code{\link{Kernel}(1)}]\cr
 Kernel used to fit the model: linear kern ('lin_kernel'), additive kernel ('add_kernel'),
@@ -53,25 +68,25 @@ Name of the status variable in \code{data}.}
 Number of decimal digits in the solution of the quadratic optimization problem.}
 
 \item{sigf}{[\code{numeric(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{maxiter}{[\code{integer(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{margin}{[\code{numeric(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{bound}{[\code{numeric(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{eig.tol}{[\code{numeric(1)}]\cr
-Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 
 \item{conv.tol}{[\code{numeric(1)}]\cr
-Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 
 \item{posd.tol}{[\code{numeric(1)}]\cr
-Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 }
 \value{
 \code{survivalsvm}
@@ -101,21 +116,21 @@ The following denotations are used for the models implemented:
    \item \code{'hybrid'}  combines simultaneously the regression and ranking constraints in the same model. Hybrid model is labeled
          \code{model2} by Van Belle et al. (2011b).
 
-}
+ }
 The argument \code{'type'} of the function \code{survivalsvm} is used to set the type of model to be fitted.
 For the models \code{vanbelle1}, \code{vanbelle2} and \code{hybrid}, differences between comparable
 pairs of observations are required. Each observation is compared with its nearest neighbor according to the survival time, and the
 three possible comparison approaches \link{makediff1}, \link{makediff2} and \link{makediff3} are offered to compute the
 differences between comparable neighbors.
 
-The current version of \code{survivalsvm} uses the solvers \code{\link{ipop}} and \code{\link{quadprog}} to solve the dual
+The current version of \code{survivalsvm} uses the solvers \code{\link[kernlab]{ipop}} and \code{\link[pracma]{quadprog}} to solve the dual
 optimization problems deduced from the suport vector formulations of the models presented above. Notice that for using \code{quadprog}
 the kernel matrix needs to be symmetric and positive definite. Therefore when the conditions are not met, the kernel matrix needs be slightly perturbed to obtain the nearest positive definite kernel matrix.
 The alternative to \code{quadprog} is \code{ipop}, that can also handle a non-negative definite kernel matrix, however more time may be
 required to solve the quadratic optimization dual problem. The argument \code{opt.meth} is used to select the solver.
 
 The \code{survivalsvm} command can be called giving a formula, in which the survival time and the status are grouped into a
-two colunm matrix using the command \code{\link{Surv}} from the package \code{survival}. An alternative is to pass the data
+two colunm matrix using the command \code{\link[survival]{Surv}} from the package \code{survival}. An alternative is to pass the data
 frame of training data points as an argument using \code{data}, to mention the name of the survival time variable and
 the name of the status variable as illustrated in the third example below.
 }

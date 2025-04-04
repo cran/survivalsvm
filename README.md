@@ -1,6 +1,11 @@
-[![Travis Build Status](https://travis-ci.org/imbs-hl/survivalsvm.svg?branch=master)](https://travis-ci.org/imbs-hl/survivalsvm)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/imbs-hl/survivalsvm?branch=master&svg=true)](https://ci.appveyor.com/project/fouodo/survivalsvm)
-[![Coverage Status](https://coveralls.io/repos/github/imbs-hl/survivalsvm/badge.svg?branch=master)](https://coveralls.io/github/imbs-hl/survivalsvm?branch=master)
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/imbs-hl/survivalsvm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/imbs-hl/survivalsvm/actions/workflows/R-CMD-check.yaml)
+[![Lifecycle:
+Stable](https://img.shields.io/badge/lifecycle-Stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#Stable)
+[![CRAN Status](https://img.shields.io/badge/CRAN-survivalsvm-blue)](https://cran.r-project.org/package=survivalsvm)
+
+<!-- badges: end -->
 ## Survival Support Vector Analysis
 Cesaire J. K. Fouodo
 
@@ -25,3 +30,4 @@ survivalsvm(Surv(time, status) ~ ., veteran, gamma.mu = 0.1)
 ### References
 * Van Belle, V., Pelcmans, K., Van Huffel S. and Suykens J. A.K. (2011a). Improved performance on high-dimensional survival data by application of Survival-SVM. Bioinformatics (Oxford, England) 27, 87-94.
 * Van Belle, V., Pelcmans, K., Van Huffel S. and Suykens J. A.K. (2011b). Support vector methods for survival analysis: a comparaison between ranking and regression approaches. Artificial Intelligence in medecine 53, 107-118.
+* Fouodo K. C. J. and König I. R. and Weihs C. and Ziegler A. and Wright M. N. (2018) Support Vector Machines for Survival Analysis with R. The R Journal 10, 412-423.

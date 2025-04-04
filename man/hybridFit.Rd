@@ -4,11 +4,25 @@
 \alias{hybridFit}
 \title{survivalsvm (hybrid approach)}
 \usage{
-hybridFit(X, Y, delta, meth_par = c(1, 1), kernel_type = "lin_kernel",
-  kernel_pars = NA, bin_cat = integer(0), makediff = makediff3,
-  opt_alg = "quadprog", sgf_sv = 5, sigf = 7, maxiter = 40,
-  margin = 0.05, bound = 10, eig.tol = 1e-06, conv.tol = 1e-07,
-  posd.tol = 1e-08)
+hybridFit(
+  X,
+  Y,
+  delta,
+  meth_par = c(1, 1),
+  kernel_type = "lin_kernel",
+  kernel_pars = NA,
+  bin_cat = integer(0),
+  makediff = makediff3,
+  opt_alg = "quadprog",
+  sgf_sv = 5,
+  sigf = 7,
+  maxiter = 40,
+  margin = 0.05,
+  bound = 10,
+  eig.tol = 1e-06,
+  conv.tol = 1e-07,
+  posd.tol = 1e-08
+)
 }
 \arguments{
 \item{X}{[\code{matrix(1)}]\cr
@@ -38,31 +52,31 @@ String indicating which of \code{'makediff1'}, \code{'makediff2'} or \code{'make
 will be used.}
 
 \item{opt_alg}{[\code{character(1)}]\cr
-Program that will be used to solve the quadratic optimization problem. Either \code{\link{quadprog}} or \code{\link{ipop}}.}
+Program that will be used to solve the quadratic optimization problem. Either \code{\link[pracma]{quadprog}} or \code{\link[kernlab]{ipop}}.}
 
 \item{sgf_sv}{[\code{integer(1)}]\cr
 Number of decimal digits in the solution of the quadratic optimization problem.}
 
 \item{sigf}{[\code{integer(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{maxiter}{[\code{integer(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{margin}{[\code{numeric(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{bound}{[\code{numeric(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{eig.tol}{[\code{numeric(1)}]\cr
-Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+Used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 
 \item{conv.tol}{[\code{numeric(1)}]\cr
-Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+Used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 
 \item{posd.tol}{[\code{numeric(1)}]\cr
-Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+Used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 }
 \value{
 [\code{Hybrid(1)}]
